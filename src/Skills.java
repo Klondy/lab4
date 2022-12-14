@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Skills {
     private final String name;
     private final String info;
@@ -12,11 +14,7 @@ public class Skills {
     }
 
     public String getInfo(){
-        if(info == null){
-            return "...";
-        } else {
-            return info;
-        }
+        return Objects.requireNonNullElse(info, "...");
     }
 
     public void useSkill(String name){

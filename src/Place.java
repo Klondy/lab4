@@ -22,16 +22,7 @@ public class Place extends AbstractPlace {
         System.out.println(placeName +" объявлена как " + typeName);
     }
 
-    public Places getType() {
-        return this.type;
-    }
-
     public String getPlace() {
         return placeName == null ? "..." : placeName;
     }
-
-//    public List<Skills> getSkills() {
-//        return skills;
-//    }
-
 }

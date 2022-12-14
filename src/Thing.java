@@ -13,8 +13,4 @@ public class Thing {
     public void action(String action){
         System.out.println(name + " " + action);
     }
-
-    public String getName() {
-        return name;
-    }
 }

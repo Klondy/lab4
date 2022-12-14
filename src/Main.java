@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-public class main {
+public class Main {
     public static void main(String[] args){
         System.out.println();
         HumanAble Carlson = new Human("Карлсон");
@@ -33,8 +31,6 @@ public class main {
 
         PlaceAble location2 = new Place("Круглый столик, покрытый скатертью");
         location2.setType(Places.RoundTable);
-//        boy.addSkills(new Skills("Скрыться следом под", location2.getPlace()));
-//        Carlson.addSkills(new Skills("Заползти под", location2.getPlace()));
         System.out.println();
 
         PlaceAble location3 = new Place("Прихожая");
@@ -46,7 +42,7 @@ public class main {
         Thing door = new Thing("Дверь");
         System.out.println();
 
-        Human.blow(boy.getName().toString());
+        Human.blow(boy.getName());
         Human.sigh(Carlson.getName());
         System.out.print(they.getName());
         System.out.println(" " + they.getSkills().get(1).getName() + they.getSkills().get(1).getInfo());

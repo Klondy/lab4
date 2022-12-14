@@ -17,11 +17,10 @@ public class Human extends AbstractHuman {
         return skills;
     }
 
-    public boolean addSkills(Skills skill){
+    public void addSkills(Skills skill){
         skills.add(skill);
         System.out.println("Объекту - \"" + this.getName() + "\" успешно присвоено умение " + skill.getName()
                 + " (" + skill.getInfo()+ ")");
-        return true;
     }
 
     public static void wentFastUnder(String name, String place){
@@ -30,10 +29,6 @@ public class Human extends AbstractHuman {
 
     public static void wentAfter(String name){
         System.out.println(name + " скрылся следом");
-    }
-
-    public static void wentAfter(String name1, String name2){
-        System.out.println(name1 + " проследовал за " + name2);
     }
 
     public static void peekIn(String name, String place){
@@ -53,6 +48,7 @@ public class Human extends AbstractHuman {
         return super.hashCode()+this.getName().hashCode();
     }
 
+    @SuppressWarnings("EqualsWhichDoesntCheckParameterClass")
     @Override
     public boolean equals(Object obj) {
         return obj.hashCode() == this.hashCode();
