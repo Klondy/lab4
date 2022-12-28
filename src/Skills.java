@@ -24,4 +24,20 @@ public class Skills {
         }
         System.out.println(name + " начал " + this.name + " " + info);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (obj == this) {
+            return true;
+        }
+
+        if (!(obj instanceof Skills)) {
+            return false;
+        }
+
+        Skills c = (Skills) obj;
+        return this.getInfo().equals(c.getInfo()) &&
+                this.getName().equals(c.getName());
+    }
 }

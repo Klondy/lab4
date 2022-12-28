@@ -5,4 +5,5 @@ public interface HumanAble {
     void addSkills(Skills skills);
     List<Skills> getSkills();
 
+
 }
